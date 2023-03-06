@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <div class="top__bg"></div>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li class="select">
+              <select>
+                <option value="RUS">RUS</option>
+                <option value="ENG">ENG</option>
+                <option value="UKR">UKR</option>
+              </select>
+              <img src="assets/svg/select_arrow.svg" class="select__svg">
+            </li>
+            <li class="select">
+              <select>
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+              </select>
+              <img src="assets/svg/select_arrow.svg" class="select__svg">
+            </li>
+          </ul>
+          <ul class="user-menu">
+            <li><a href="#">Сравнение</a></li>
+            <li><a href="#">Отложенные</a></li>
+            <li><a href="#">Регистрация</a></li>
+            <li><a href="#">Войти</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="main-info">
+        <img src="assets/svg/logo-ru.svg" alt="ornellatex">
+        <div class="phones">
+          <div class="phone">
+            <img src="assets/svg/phone.svg">
+            <a href="#">+38 <span class="orange">(096)</span> 123 45 67</a>
+          </div>
+          <div class="phone">
+            <img src="assets/svg/phone.svg">
+            <a href="#">+38 <span class="orange">(096)</span> 123 45 67</a>
+          </div>
+          <div class="phone">
+            <img src="assets/svg/phone.svg">
+            <a href="#">+38 <span class="orange">(096)</span> 123 45 67</a>
+          </div>
+        </div>
+        <div class="messengers">
+          <div class="messenger">
+            <img src="assets/svg/viber.svg">
+            <a href="#"><span class="purple underline">написать в viber</span></a>
+          </div>
+          <div class="messenger">
+            <img src="assets/svg/telegram.svg">
+            <a href="#"><span class="lightblue underline">написать в telegram</span></a>
+          </div>
+          <div class="messenger">
+            <img src="assets/svg/watsapp.svg">
+            <a href="#"><span class="green underline">написать в watsapp</span></a>
+          </div>
+        </div>
+        <form class="search-form">
+          <input type="text" placeholder="Найти">
+          <button class="btn search-btn" type="submit"><img src="assets/svg/search.svg"></button>
+        </form>
+        <button class="btn">Расширенный поиск</button>
+        <div class="cart">
+          <span class="cart-info">2 шт. - 2567 грн.</span>
+          <button class="btn cart-btn"><img src="assets/svg/cart.svg" alt="cart"></button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="catalog">
+        <li>Все ткани</li>
+        <li>По составу
+          <ul class="subcatalog">
+            <li>Акрил</li>
+            <li>Вискоза</li>
+            <li>Шерсть</li>
+            <li>Эластан</li>
+            <li>PU</li>
+            <li>Металлик</li>
+            <li>Полиэстр</li>
+            <li>Нейлон</li>
+            <li>Коттон</li>
+            <li>Лён</li>
+            <li>Спандекс</li>
+            <li>Люрекс</li>
+          </ul>
+        </li>
+        <li>По назначению</li>
+        <li>По типу</li>
+        <li>Распродажа</li>
+      </ul>
+    </div>
+  </header>
+</body>
+
+</html>
