@@ -28,7 +28,14 @@ catalogsElement.addEventListener('mouseover', e => {
 });
 
 
-
+// burger-menu animation
+const burgerButton = document.querySelector('.burger');
+burgerButton.addEventListener('click', () => {
+  burgerButton.children[0].classList.toggle('burger-item-active');
+  burgerButton.classList.toggle('gray-bg');
+  const burgerMenu = document.querySelector('.burger-menu');
+  burgerMenu.classList.toggle('burger-menu-active');
+});
 
 
 
