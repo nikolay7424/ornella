@@ -264,14 +264,16 @@ header nav {
 }
 
 .cart-btn {
-  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart-info {
   padding: 1.5rem 3rem 1.5rem 1.5rem;
   border-radius: var(--border-radius);
   border: 1px solid var(--orange);
-  margin-right: -1.5rem;
+  margin-right: -1.7rem;
 }
 
 /* catalog */
@@ -301,13 +303,15 @@ header nav {
   border-left: 0.2rem solid var(--gray-medium);
   text-align: center;
   position: relative;
+  transition: background-color 0.1s ease;
 }
 
-.catalog > li:hover {
+.catalog > li.active, 
+.catalog > li:first-child:hover {
   background: var(--orange);
 }
 
-.catalog > li:not(:first-child):hover::after {
+.catalog > li.active::after {
   content: '';
   display: block;
   width: 2rem;
@@ -320,21 +324,11 @@ header nav {
   z-index: 2;
 }
 
-.catalog > li:last-child:hover::after {
-  content: '';
-  display: none;
-}
-
-
 .subcatalog {
   display: none;
 }
 
 .active {
-  display: block;
-}
-
-.subcatalog:hover {
   display: block;
 }
 
@@ -541,7 +535,7 @@ header nav {
 .accordion-item {
   background: var(--gray-dark);
   color: var(--white);
-  margin-bottom: 3rem;
+  
 }
 
 .accordion-item-header,
@@ -578,11 +572,9 @@ header nav {
   transition: transform 0.3s ease-in-out;
 }
 
-.accordion-item-header span,
-.accordion-item-header-main span {
-  background: var(--dark-gray);
-  padding: 1rem;
-  border-radius: 0.5rem;
+.accordion-item-header h4, 
+.accordion-item-header a {
+  pointer-events: none;
 }
 
 .rotate {
@@ -596,22 +588,22 @@ header nav {
   transition: max-height 0.3s ease-in-out;
 }
 
-.accordion-item-body-content {
-  padding: 0 3.5rem 2.5rem 3.5rem;
+.accordion-item-body-content > 
+.accordion-item {
+  border-bottom: 2px solid var(--gray-medium);
 }
 
-.accordion-item-body-content ul, p {
+.accordion-item-body-content:first-child {
+  border-top: 2px solid var(--gray-medium);
+}
+
+.accordion-item-body-content ul {
   padding: 0;
+  list-style: none;
   margin: 0;
 }
 
 .accordion-item-body-content li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 3px solid var(--gray);
-}
-
-.accordion-item-body-content p {
-  margin: 1.5rem 0;
+  padding: 1rem 2rem;
+  font-weight: 500;
 }

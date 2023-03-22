@@ -3,31 +3,42 @@ const catalogs = Array.from(document.querySelector('.catalog').children);
 // trim first and last li's
 catalogs.pop();
 catalogs.shift();
-const catalogsElement = document.querySelector('.catalog');
 const subcatalogs = Array.from(document.querySelectorAll('.subcatalog'));
-catalogsElement.addEventListener('mouseover', e => {
-  // reset all active classes
-  const allActiveSubcatalogs = document.querySelectorAll('.active');
-  allActiveSubcatalogs.forEach(function(activeSubcatalog) {
-    activeSubcatalog.classList.remove('active');
-  });
+let enteredSubcatalog = false;
 
-  for(catalog in catalogs) {
-    if(catalogs[catalog] === e.target) {
-      // simulate hover
-      subcatalogs[catalog].classList.add('active');
-      const activeSubCatalog = document.querySelector('.active');
-      activeSubCatalog.addEventListener('mouseout', e => {
-        activeSubCatalog.classList.remove('active');
+function catalogsReset() {
+  subcatalogs.forEach(subcatalog => {
+    subcatalog.classList.remove('active');
+  });
+  catalogs.forEach(catalog => {
+    catalog.classList.remove('active');
+  });
+}
+
+catalogs.forEach((catalog, indx) => {
+  catalogsReset();
+  catalog.addEventListener('mouseenter', e => {
+    catalog.classList.add('active');
+    subcatalogs[indx].classList.add('active');
+
+    catalog.addEventListener('mouseleave', e => {
+      subcatalogs[indx].addEventListener('mouseenter', e => {
+        enteredSubcatalog = true;
+        subcatalogs[indx].addEventListener('mouseleave', e => {
+          subcatalogs[indx].classList.remove('active');
+          catalog.classList.remove('active');
+          enteredSubcatalog = false;
+        });
+
       });
-      // add delay, to keep subcatalog active, if mouse is hovering it
-      catalogs[catalog].addEventListener('mouseout', e => {
-        setTimeout(() => {
-          activeSubCatalog.classList.remove('active');
-        }, 100);
-      });
-    }
-  }
+      setTimeout(() => {
+        if(!enteredSubcatalog) {
+          subcatalogs[indx].classList.remove('active');
+          catalog.classList.remove('active');
+        }
+      }, 100);
+    });
+  });
 });
 
 
@@ -66,6 +77,9 @@ accordionItemHeaderMain.addEventListener('click', (e) => {
 const accordionItemHeaders = document.querySelectorAll('.accordion-item-header');
 accordionItemHeaders.forEach(accordionItemHeader => {
   accordionItemHeader.addEventListener('click', (e) => {
+    if(e.target == accordionItemHeaders[0] || e.target == accordionItemHeaders[accordionItemHeaders.length - 1]) {
+      return;
+    }
     // keep only one list open
     const currentlyActiveAccordionItemHeader = document.querySelector('.accordion-item-header.accordion-active');
     if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader !== accordionItemHeader) {
