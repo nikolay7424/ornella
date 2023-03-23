@@ -5,6 +5,7 @@ catalogs.pop();
 catalogs.shift();
 const subcatalogs = Array.from(document.querySelectorAll('.subcatalog'));
 let enteredSubcatalog = false;
+const transparentWhiteBgs = Array.from(document.querySelectorAll('.transparent-white-bg'));
 
 function catalogsReset() {
   subcatalogs.forEach(subcatalog => {
@@ -21,25 +22,37 @@ catalogs.forEach((catalog, indx) => {
     catalog.classList.add('active');
     subcatalogs[indx].classList.add('active');
 
+    // leaving catalog
     catalog.addEventListener('mouseleave', e => {
+      // checking if while leaving catalog we entered subcatalog
       subcatalogs[indx].addEventListener('mouseenter', e => {
+        // if we entered subcatalog, keeping it active
         enteredSubcatalog = true;
         subcatalogs[indx].addEventListener('mouseleave', e => {
+          // leaving subcatalog
           subcatalogs[indx].classList.remove('active');
           catalog.classList.remove('active');
           enteredSubcatalog = false;
-        });
-
-      });
+        }, { once: true });
+      }, { once: true });
+      //if while leaving catalog we haven't entered subcatalog, we add a delay, to make checking possible, end then leave
       setTimeout(() => {
         if(!enteredSubcatalog) {
           subcatalogs[indx].classList.remove('active');
           catalog.classList.remove('active');
         }
-      }, 100);
-    });
+      }, 50);
+    }, { once: true });
   });
 });
+// leaving while entering white bg
+transparentWhiteBgs.forEach(transparentWhiteBg => {
+  transparentWhiteBg.addEventListener('mouseenter', e => {
+    catalogsReset();
+  });
+});
+
+
 
 
 // BURGER MENU 
@@ -103,3 +116,5 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     }
   });
 });
+
+
