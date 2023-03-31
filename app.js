@@ -41,7 +41,7 @@ catalogs.forEach((catalog, indx) => {
           subcatalogs[indx].classList.remove('active');
           catalog.classList.remove('active');
         }
-      }, 50);
+      }, 100);
     }, { once: true });
   });
 });
@@ -118,3 +118,10 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 });
 
 
+// product user actions
+const productUserButtons = document.querySelectorAll('.product-user-action-img');
+productUserButtons.forEach(productUserButton => {
+  productUserButton.addEventListener('click', () => {
+    productUserButton.classList.toggle('product-user-action-img-active')
+  });
+});

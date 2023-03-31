@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
   <script defer src="app.js"></script>
 </head>
 
@@ -399,6 +400,58 @@
       <img src="assets/img/Slider.jpg" class="media">
     </section>
   </div>
+  <section class="products">
+    <div class="container">
+      <div class="products-sale">
+        <h2 class="products-title">РАСПРОДАЖА</h2>
+        <div class="products-wrapper">
+          <div class="product">
+            <img src="assets/img/products/1.jpg" alt="wool" class="product-img">
+            <div class="product-flag">РАСПРОДАЖА</div>
+            <p class="product-code">Артикул: 203925</p>
+            <h3 class="product-name">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</h3>
+            <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
+            <div class="product-buttons">
+              <div class="product-buttons__quantity">
+                <button class="btn-minus">-</button>
+                <input type="text" class="product-quantity" value="1" min="0" max="9999">
+                <button class="btn-plus">+</button>
+              </div>
+              <button class="btn product-btn">В корзину</button>
+            </div>
+            <div class="product-expand">
+              <div class="product-colors-wrapper">
+                <p class="product-colors-title">Цвета:</p>
+                <div class="product-colors">
+                  <img src="assets/img/products/1_1.jpg" alt="color" class="product-color-img">
+                  <img src="assets/img/products/1_2.jpg" alt="color" class="product-color-img">
+                  <img src="assets/img/products/1_3.jpg" alt="color" class="product-color-img">
+                  <img src="assets/img/products/1_4.jpg" alt="color" class="product-color-img">
+                  <img src="assets/img/products/1_5.jpg" alt="color" class="product-color-img">
+                </div>
+              </div>
+              <div class="product-user-actions">
+
+                <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z" />
+                </svg>
+                <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="products-new"></div>
+    <div class="products-recomended"></div>
+  </section>
 </body>
 
 </html>
