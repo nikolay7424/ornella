@@ -693,6 +693,9 @@ header nav {
 
 .product {
   position: relative;
+  background: var(--white);
+  transition: scale 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding: 2rem;
 }
 
 .product-img {
@@ -702,7 +705,7 @@ header nav {
 
 .product-flag {
   position: absolute;
-  top: 1rem;
+  top: 3rem;
   background: var(--orange);
   color: var(--white);
   padding: 0.5rem 1.5rem 0.5rem 1rem;
@@ -746,16 +749,15 @@ header nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 4rem;
 }
 
 .product-buttons__quantity {
   width: 45%;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 0.5rem;
+  height: 4rem;
 }
 
 .product-quantity {
@@ -773,10 +775,10 @@ header nav {
 }
 
 .product-btn {
-  height: 100%;
   width: 45%;
   padding: 1rem 0;
   border-radius: 0.5rem;
+  height: 4rem;
 }
 
 .btn-minus, 
@@ -846,5 +848,87 @@ header nav {
   fill: var(--orange);
 }
 
+.product-expand {
+  background: var(--white);
+  position: absolute;
+  width: 100%;
+  visibility: hidden;
+  padding: 2rem;
+  left: 0;
+  top: 93%;
+  box-shadow: 0 15px 15px 10px rgba(51, 51, 51, 0.1);
+  z-index: -1;
+}
 
+.product:hover {
+  scale: 1.05;
+  z-index: 4;
+  box-shadow: 0 -15px 15px 10px rgba(51, 51, 51, 0.1);
+}
 
+.product:hover .product-expand {
+  visibility: visible;
+}
+
+path {
+  pointer-events: none;
+}
+
+.open-more-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.open-more {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: var(--orange);
+  text-decoration: underline;
+  padding: 6rem;
+  width: 80%;
+  box-shadow: 0 15px 25px -25px rgba(51, 51, 51, 0.6);
+  display: block;
+}
+
+.open-more:hover {
+  text-decoration: none;
+}
+
+/* product mobile */
+
+@media (max-width: 560px) {
+  .products-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  }
+
+  .product {
+    padding: 1rem;
+  }
+
+  .product-flag {
+    top: 2rem;
+    padding: 0.4rem 1rem 0.4rem 0.8rem;
+  }
+
+  .product-buttons {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .product-buttons__quantity,
+  .product-btn {
+    width: 100%;
+  }
+
+  .open-more {
+    font-size: 2rem;
+    padding: 3rem;
+  }
+
+  .product-expand {
+    display: none;
+  }
+}

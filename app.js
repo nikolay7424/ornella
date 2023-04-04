@@ -119,9 +119,68 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 
 
 // product user actions
-const productUserButtons = document.querySelectorAll('.product-user-action-img');
-productUserButtons.forEach(productUserButton => {
-  productUserButton.addEventListener('click', () => {
-    productUserButton.classList.toggle('product-user-action-img-active')
-  });
+
+function isNumeric(str) {
+  if (typeof str != "string") return false;
+  return !isNaN(str) && 
+         !isNaN(parseFloat(str));
+}
+
+const productWrapper = document.querySelector('.products-wrapper');
+productWrapper.addEventListener('click', (e) => {
+  // fav and compare buttons 
+  if(e.target.classList.contains('product-user-action-img')) {
+    e.target.classList.toggle('product-user-action-img-active');
+  }
+
+  // minus button
+  if(e.target.classList.contains('btn-minus')) {
+    if(e.target.nextElementSibling.value <= 1) {
+      e.preventDefault();
+      return
+    };
+    e.target.nextElementSibling.value -= 1;
+    e.preventDefault();
+
+  }
+
+  // plus button
+  if(e.target.classList.contains('btn-plus')) {
+    if(e.target.previousElementSibling.value >= 9999) {
+      e.preventDefault();
+      return;
+    }
+    let quantityValueInt = parseInt(e.target.previousElementSibling.value);
+    quantityValueInt += 1;
+    e.target.previousElementSibling.value = quantityValueInt;
+    e.preventDefault();
+  }
+
+  // quantity text form validation
+  if(e.target.classList.contains('product-quantity')) {
+    e.target.addEventListener('beforeinput', e => {
+      // checking for text input
+      if(!isNumeric(e.data)) {
+        e.preventDefault();
+      }
+
+      // cheking limits
+      if(parseInt(e.target.value) > 9999) {
+        e.preventDefault();
+        return;
+      }
+    });
+  }
+
+  // add to cart
+  if(e.target.classList.contains('product-btn')) {
+    if(parseInt(e.target.previousElementSibling.children[1].value) === 0) {
+      e.preventDefault();
+    }
+
+    // todo: adding product to the cart
+  }
+
+
 });
+
