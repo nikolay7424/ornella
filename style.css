@@ -964,7 +964,7 @@ path {
 
 .catalog-grid-item:hover {
   scale: 1.1;
-  box-shadow: 0 0 15px 10px rgba(51, 51, 51, 0.1);
+  box-shadow: 0 0 15px 10px rgba(51, 51, 51, 0.2);
 }
 
 .catalog-grid-item > * {
@@ -1022,14 +1022,8 @@ path {
   margin: 0 auto;
   max-width: 70%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
   gap: 6rem;
-}
-
-.stats-text, 
-.stats {
-  /* width: 45%; */
-  padding-top: 7.5rem;
 }
 
 .stats-title {
@@ -1083,20 +1077,21 @@ path {
 .stat {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1 ;
+  cursor: pointer;
 }
 
 .stat-number {
   position: absolute;
-  font-size: 4rem;
+  font-size: 4rem; 
   font-weight: bold;
   color: var(--white);
   margin: 0;
   padding: 0;
   text-align: left;
-  bottom: 25%;
+  bottom: 15%;
   left: 5%;
   line-height: 3rem;
+  pointer-events: none;
 }
 
 .stat-desc {
@@ -1107,16 +1102,12 @@ path {
 .stat-img {
   border-radius: 2rem;
   width: 100%;
+  pointer-events: none;
 }
 
 @media (max-width: 1000px) {
   .stats-container {
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    gap: 0;
-  }
-
-  .stats-container {
-    margin: 0 4rem;
   }
 
   .stats-text {
@@ -1124,19 +1115,35 @@ path {
   }
 
   .statistic {
-    margin-top: 0;
+    margin-top: 5rem;
   }
 
   .stats-title {
     font-size: 2rem;
-    max-width: 100%;
+    max-width: 90%;
+  }
+
+  .stats {
+    gap: 2rem;
+  }
+
+  .stat-number {
+    font-size: 5rem; 
   }
 }
 
 @media (max-width: 600px) {
+  .stats-container {
+    max-width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
 
+  .stat-number {
+    font-size: 6rem; 
+  }
 
   .stats {
     grid-template-columns: 1fr;
+    padding-top: 2rem;
   }
 }
