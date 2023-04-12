@@ -188,6 +188,7 @@ header nav {
 
 .orange {
   color: var(--orange);
+  transition: color 0.2s ease-in-out;
 }
 
 .purple {
@@ -1146,4 +1147,135 @@ path {
     grid-template-columns: 1fr;
     padding-top: 2rem;
   }
+}
+
+
+/* NEWS */
+
+.news {
+  margin-top: 15rem;
+}
+
+.news-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+}
+
+.news-img {
+  width: 100%;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.news-title {
+  margin-top: 1.8rem;
+}
+
+.news-preview {
+  font-size: 1.3rem;
+  line-height: 140%;
+}
+
+.news-open:hover {
+  text-decoration: none;
+}
+
+.news-preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* ABOUT */
+
+.about {
+  margin-top: 9rem;
+  margin-bottom: 9rem;
+}
+
+.about-text {
+  columns: 2 35ch;
+  column-gap: 4rem;
+}
+
+.about-text > p{
+  margin-top: 0;
+}
+
+/* BRANCHES */
+
+.branches {
+  background: var(--gray-light);
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.branches-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 4rem;
+}
+
+.branches-maps iframe {
+  height: max(100%, 35rem);
+}
+
+.branch {
+  padding: 1rem 1rem 1rem 4rem;
+  background: var(--white);
+  border-radius: 0 8rem 8rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, 
+    color 0.2s ease-in-out;
+}
+
+.branches-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.branch::before {
+  content: '';
+  display: block;
+  /* width: 3rem; */
+  height: 32%;
+  aspect-ratio: 3 / 2;
+  background: var(--orange);
+  border-radius: 0 1.5rem 1.5rem 0;
+  position: absolute;
+  left: 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.branch::before,
+.branch-text,
+.branch-title {
+  pointer-events: none;
+}
+
+.branch-phone {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.branch:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.branch:hover .orange {
+  color: var(--white);
+}
+
+.branch:hover::before {
+  background: var(--white);
 }
