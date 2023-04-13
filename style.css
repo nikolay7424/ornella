@@ -66,7 +66,7 @@ a {
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -105,7 +105,7 @@ header nav {
 }
 
 .menu li, .user-menu li {
-  padding: 0 3.5rem;
+  padding: 0 3.3rem;
   margin: 1rem 0;
 }
 
@@ -212,7 +212,6 @@ header nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 3rem;
   margin: 1rem 0;
 }
 
@@ -950,7 +949,7 @@ path {
 .catalog-grid {
   margin-top: 10rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   gap: 4rem;
 }
 
@@ -1215,12 +1214,12 @@ path {
 
 .branches-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
   gap: 4rem;
 }
 
 .branches-maps iframe {
-  height: max(100%, 50rem);
+  height: 100%;
   width: 100%;
 }
 
@@ -1230,6 +1229,7 @@ path {
   border-radius: 0 8rem 8rem 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   position: relative;
   cursor: pointer;
@@ -1256,6 +1256,10 @@ path {
   position: absolute;
   left: 0;
   transition: background-color 0.2s ease;
+}
+
+.branch-text {
+  margin: 0;
 }
 
 .branch::before,
@@ -1286,3 +1290,70 @@ path {
 .branch:hover::before {
   background: var(--white);
 }
+
+.branches-maps {
+  min-height: 30rem;
+}
+
+.branch-mobile-map-link {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .branch-title {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .branches-maps {
+    display: none;
+  }
+  .branches-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  .branch-title {
+    font-size: 4vw;
+  }
+
+  .branch {
+    background: var(--gray-light);
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+
+  .branch::before {
+    top: 1.8rem;
+    height: 20%;
+  }
+
+  .branch:hover {
+    color: initial;
+    background: initial;
+  }
+  .branch:hover::before {
+    background: var(--orange);
+  }
+  .branch:hover .orange {
+    color: var(--orange);
+  }
+
+  .branch-mobile-map-link {
+    display: inline;
+    text-decoration: underline;
+    color: var(--orange);
+    font-size: 1.3rem;
+    position: relative;
+    margin-left: 2rem;
+  }
+
+  .branch-map-img {
+    position: absolute;
+    left: -2rem;
+  }
+
+}
+

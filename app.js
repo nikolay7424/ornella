@@ -197,6 +197,10 @@ const branchesIframeUrls = [
 ];
 
 branchesBlock.addEventListener('click', e => {
+  if(window.innerWidth < 700) {
+    e.preventDefault();
+    return;
+  }
   branches.forEach((branch, index) => {
     if(branchesIframeUrls[index] === branchIframe.src) {
       e.preventDefault();
