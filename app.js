@@ -202,7 +202,7 @@ branchesBlock.addEventListener('click', e => {
     return;
   }
   branches.forEach((branch, index) => {
-    if(branchesIframeUrls[index] === branchIframe.src) {
+    if(branchesIframeUrls[index] === branchIframe.src && e.target === branch) {
       e.preventDefault();
       return;
     }
