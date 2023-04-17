@@ -590,11 +590,11 @@ header nav {
   margin-left: 1rem;
   transition: transform 0.3s ease-in-out;
 }
-
-.accordion-item-header h4, 
+/* why? */
+/* .accordion-item-header h4, 
 .accordion-item-header a {
   pointer-events: none;
-}
+} */
 
 .rotate {
   transform: rotateZ(180deg);
@@ -1368,7 +1368,7 @@ footer {
   padding-top: 3rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 10rem;
+  grid-column-gap: 5rem;
   grid-row-gap: 1.5rem;
 }
 
@@ -1478,6 +1478,15 @@ footer .phone {
 
 footer .search-btn {
   margin-left: -3rem;
+}
+
+.copywrite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  opacity: 60%;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 1200px) {
