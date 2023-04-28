@@ -681,15 +681,18 @@ header nav {
 }
 
 .slider-track-container {
-  background: lightgreen;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .slider-track {
   padding: 0;
   margin: 0;
   list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .slider-slide {
@@ -741,6 +744,8 @@ header nav {
 .slider-indicator.current-slide {
   background: rgba(0, 0, 0, 0.75);
 }
+
+.is-hidden {display: none;}
 
 @media (max-width: 1000px) {
   .slider-info-wrapper h1 {
