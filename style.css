@@ -345,6 +345,8 @@ header nav {
   border-bottom: 1px solid rgba(49, 49, 49, 0.2);
   background-color: var(--white);
   transition: background-color 0.2s ease-in;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .cart-modal-product.cart-modal-product-remove {
@@ -389,6 +391,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .cart-modal-confirm {
@@ -411,6 +414,32 @@ header nav {
 
 .cart-modal-continute:hover {
   border-color: transparent;
+}
+
+.cart-modal-empty {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+@media (width < 1100px) {
+  .cart-modal-btn {
+    width: 5rem;
+  }
+
+  .cart-modal .product-buttons__quantity {
+    width: 30%;
+  }
+}
+
+@media (width < 700px) {
+  .cart-modal-product {
+    flex-direction: column;
+  }
+
+  .cart-modal .product-buttons__quantity {
+    width: 80%;
+  }
 }
 
 /* catalog */

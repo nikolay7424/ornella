@@ -178,11 +178,10 @@ productWrapper.addEventListener('click', (e) => {
 
   // add to cart
   if(e.target.classList.contains('product-btn')) {
-    if(parseInt(e.target.previousElementSibling.children[1].value) === 0) {
+    if(parseInt(e.target.previousElementSibling.children[1].value) <= 0) {
       e.preventDefault();
     }
-
-    // todo: adding product to the cart
+    openCartModal();
   }
 });
 
@@ -314,6 +313,8 @@ dotsNav.addEventListener('click', e => {
 const cartButtons = document.querySelectorAll('.cart-btn');
 const closeCartButtons = document.querySelectorAll('.cart-btn-close');
 const cartModal = document.querySelector('.cart-modal');
+const cartModalProducts = document.querySelector('.cart-modal-products');
+const cartModalTotal = document.querySelector('.cart-modal-total');
 
 cartButtons.forEach(cartButton => {
   cartButton.addEventListener('click', openCartModal);
@@ -326,10 +327,15 @@ function cartModalEventsHandler(e) {
   }
 
   if(e.target.classList.contains('cart-modal-product-delete')) {
-    e.target.parentElement.classList.add('cart-modal-product-remove')
+    e.target.parentElement.classList.add('cart-modal-product-remove');
     setTimeout(() => {
       e.target.parentElement.remove();
+      if(cartModalProducts.children.length === 0) {
+        cartModalTotal.style.visibility = 'hidden';
+        cartModalTotal.nextElementSibling.classList.remove('is-hidden');
+      }
     }, 300);
+
   }
 
   productInputFormValidation(e);
@@ -337,6 +343,12 @@ function cartModalEventsHandler(e) {
 
 
 function openCartModal() {
+  if(cartModalProducts.children.length === 0) {
+    cartModalTotal.style.visibility = 'hidden';
+    cartModalTotal.nextElementSibling.classList.remove('is-hidden');
+  } else {
+    cartModalTotal.nextElementSibling.classList.add('is-hidden');
+  }
   cartModal.showModal();
   cartModal.addEventListener('click', cartModalEventsHandler);
 }
