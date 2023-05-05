@@ -126,6 +126,47 @@ function isNumeric(str) {
          !isNaN(parseFloat(str));
 }
 
+function productInputFormValidation(e) {
+    // minus button
+    if(e.target.classList.contains('btn-minus')) {
+      if(e.target.nextElementSibling.value <= 1) {
+        e.preventDefault();
+        return
+      };
+      e.target.nextElementSibling.value -= 1;
+      e.preventDefault();
+  
+    }
+  
+    // plus button
+    if(e.target.classList.contains('btn-plus')) {
+      if(e.target.previousElementSibling.value >= 9999) {
+        e.preventDefault();
+        return;
+      }
+      let quantityValueInt = parseInt(e.target.previousElementSibling.value);
+      quantityValueInt += 1;
+      e.target.previousElementSibling.value = quantityValueInt;
+      e.preventDefault();
+    }
+  
+    // quantity text form validation
+    if(e.target.classList.contains('product-quantity')) {
+      e.target.addEventListener('beforeinput', e => {
+        // checking for text input
+        if(!isNumeric(e.data)) {
+          e.preventDefault();
+        }
+  
+        // cheking limits
+        if(parseInt(e.target.value) > 9999) {
+          e.preventDefault();
+          return;
+        }
+      });
+    }
+}
+
 const productWrapper = document.querySelector('.products-wrapper');
 productWrapper.addEventListener('click', (e) => {
   // fav and compare buttons 
@@ -133,44 +174,7 @@ productWrapper.addEventListener('click', (e) => {
     e.target.classList.toggle('product-user-action-img-active');
   }
 
-  // minus button
-  if(e.target.classList.contains('btn-minus')) {
-    if(e.target.nextElementSibling.value <= 1) {
-      e.preventDefault();
-      return
-    };
-    e.target.nextElementSibling.value -= 1;
-    e.preventDefault();
-
-  }
-
-  // plus button
-  if(e.target.classList.contains('btn-plus')) {
-    if(e.target.previousElementSibling.value >= 9999) {
-      e.preventDefault();
-      return;
-    }
-    let quantityValueInt = parseInt(e.target.previousElementSibling.value);
-    quantityValueInt += 1;
-    e.target.previousElementSibling.value = quantityValueInt;
-    e.preventDefault();
-  }
-
-  // quantity text form validation
-  if(e.target.classList.contains('product-quantity')) {
-    e.target.addEventListener('beforeinput', e => {
-      // checking for text input
-      if(!isNumeric(e.data)) {
-        e.preventDefault();
-      }
-
-      // cheking limits
-      if(parseInt(e.target.value) > 9999) {
-        e.preventDefault();
-        return;
-      }
-    });
-  }
+  productInputFormValidation(e);
 
   // add to cart
   if(e.target.classList.contains('product-btn')) {
@@ -304,3 +308,35 @@ dotsNav.addEventListener('click', e => {
   hideShowArrows(targetIndex);
 
 });
+
+
+// CART MODAL
+const cartButtons = document.querySelectorAll('.cart-btn');
+const closeCartButtons = document.querySelectorAll('.cart-btn-close');
+const cartModal = document.querySelector('.cart-modal');
+
+cartButtons.forEach(cartButton => {
+  cartButton.addEventListener('click', openCartModal);
+});
+
+function cartModalEventsHandler(e) {
+  if(e.target.classList.contains('close-btn')) {
+    cartModal.close();
+    cartModal.removeEventListener('click', cartModalEventsHandler);
+  }
+
+  if(e.target.classList.contains('cart-modal-product-delete')) {
+    e.target.parentElement.classList.add('cart-modal-product-remove')
+    setTimeout(() => {
+      e.target.parentElement.remove();
+    }, 300);
+  }
+
+  productInputFormValidation(e);
+}
+
+
+function openCartModal() {
+  cartModal.showModal();
+  cartModal.addEventListener('click', cartModalEventsHandler);
+}
