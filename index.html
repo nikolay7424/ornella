@@ -16,7 +16,7 @@
 
 <body>
   <div class="top__bg"></div>
-  <header>
+  <header id="header">
     <nav>
       <div class="container">
         <div class="menu-wrapper">
@@ -54,7 +54,7 @@
     </nav>
     <div class="container">
       <div class="main-info">
-        <img src="assets/svg/logo-ru.svg" alt="ornellatex">
+        <a href="index.html"><img src="assets/svg/logo-ru.svg" alt="ornellatex"></a>
         <div class="phones">
           <div class="phone">
             <img src="assets/svg/phone.svg">
@@ -83,11 +83,13 @@
             <a href="https://wa.me/380961234567"><span class="green underline">написать в watsapp</span></a>
           </div>
         </div>
-        <form class="search-form">
+        <form class="search-form" action="products.html">
           <input type="text" placeholder="Найти">
           <button class="btn search-btn" type="submit"><img src="assets/svg/search.svg"></button>
         </form>
-        <button class="btn">Расширенный поиск</button>
+        <form action="products.html">
+          <button class="btn">Расширенный поиск</button>
+        </form>
         <div class="cart">
           <span class="cart-info">2 шт. - 2567 грн.</span>
           <button class="btn cart-btn"><img src="assets/svg/cart.svg" alt="cart"></button>
@@ -140,7 +142,9 @@
           <button class="cart-modal-continute close-btn">Продолжить покупки</button>
           <div class="cart-modal-confirm">
             <p class="product-price">Итого: <span class="bold"> 2260</span> грн.</p>
-            <button class="btn">Оформить заказ</button>
+            <form action="checkout.html">
+              <button class="btn">Оформить заказ</button>
+            </form>
           </div>
         </div>
         <p class="cart-modal-empty">Ваша корзина пуста</p>
@@ -1239,6 +1243,9 @@
       </div>
     </div>
   </section>
+
+
+  <a href="#header" class="up-arrow"><img src="assets/svg/up-arrow.svg" alt="up"></a>
 
   <footer>
     <div class="container">

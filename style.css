@@ -1,5 +1,6 @@
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -117,6 +118,15 @@ header nav {
   border-left: 0.1rem solid var(--gray-medium-2);
 }
 
+.menu li a {
+  color: var(--gray-dark);
+}
+
+.menu li a:hover,
+.user-menu li a:hover {
+  text-decoration: underline;
+}
+
 .user-menu li {
   border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
 }
@@ -220,6 +230,10 @@ header nav {
   align-items: center;
   margin-bottom: 0.5rem;
   font-weight: 500;
+}
+
+.messenger span:hover {
+  text-decoration: none;
 }
 
 .phone img,  .messenger img {
@@ -462,7 +476,6 @@ header nav {
 }
 
 .catalog > li {
-  padding: 2rem;
   cursor: pointer;
   font-weight: bold;
   color: var(--white);
@@ -470,6 +483,11 @@ header nav {
   text-align: center;
   position: relative;
   transition: background-color var(--burger-transition) ease;
+}
+
+.catalog > li a {
+  padding: 2rem;
+  display: block;
 }
 
 .catalog > li.active, 
@@ -1595,6 +1613,18 @@ path {
 
 
 /* FOOTER */
+
+.up-arrow {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  transform: translateX(5rem);
+  transition: transform 0.2s ease-in;
+}
+
+.up-arrow.arrow-active {
+  transform: translateX(0);
+}
 
 footer {
   background: var(--gray-dark);

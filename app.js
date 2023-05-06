@@ -174,6 +174,7 @@ productWrapper.addEventListener('click', (e) => {
     e.target.classList.toggle('product-user-action-img-active');
   }
 
+  // product quantity controls
   productInputFormValidation(e);
 
   // add to cart
@@ -326,23 +327,37 @@ function cartModalEventsHandler(e) {
     cartModal.removeEventListener('click', cartModalEventsHandler);
   }
 
+  // close on click outside of modal
+  const cartDimentions = cartModal.getBoundingClientRect();
+  if(
+    e.clientX < cartDimentions.left ||
+    e.clientX > cartDimentions.right ||
+    e.clientY < cartDimentions.top ||
+    e.clientY > cartDimentions.bottom
+    ) {
+    cartModal.close();
+    cartModal.removeEventListener('click', cartModalEventsHandler);
+  }
+
+  // product deleting
   if(e.target.classList.contains('cart-modal-product-delete')) {
     e.target.parentElement.classList.add('cart-modal-product-remove');
     setTimeout(() => {
       e.target.parentElement.remove();
       if(cartModalProducts.children.length === 0) {
         cartModalTotal.style.visibility = 'hidden';
+        // empty cart message
         cartModalTotal.nextElementSibling.classList.remove('is-hidden');
       }
     }, 300);
 
   }
-
+  // product quantity controls
   productInputFormValidation(e);
 }
 
-
 function openCartModal() {
+  // empty cart message
   if(cartModalProducts.children.length === 0) {
     cartModalTotal.style.visibility = 'hidden';
     cartModalTotal.nextElementSibling.classList.remove('is-hidden');
@@ -352,3 +367,15 @@ function openCartModal() {
   cartModal.showModal();
   cartModal.addEventListener('click', cartModalEventsHandler);
 }
+
+
+// FOOTER UP ARROW
+const upArrow = document.querySelector('.up-arrow');
+
+window.addEventListener('scroll', e => {
+  if(window.scrollY > 2500) {
+    upArrow.classList.add('arrow-active');
+  } else {
+    upArrow.classList.remove('arrow-active');
+  }
+});
