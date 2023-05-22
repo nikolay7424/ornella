@@ -18,6 +18,7 @@ export default class Select {
 
 function setupCustomElement(select) {
   select.customElement.classList.add('custom-select-container');
+  // make it focusable
   select.customElement.tabIndex = 0;
 
   select.labelElement.classList.add('custom-select-value');

@@ -1,3 +1,12 @@
+// SELECT
+import Select from './select/select.js';
+const selectElements = document.querySelectorAll('[data-custom]');
+selectElements.forEach(selectElement => {
+  new Select(selectElement);
+});
+
+
+
 // DROPDOWN MENU
 const catalogs = Array.from(document.querySelector('.catalog').children);
 // trim first and last li's
@@ -168,14 +177,31 @@ function productInputFormValidation(e) {
 }
 
 const productWrapper = document.querySelector('.products-wrapper');
+const productWrapperArr = Array.from(document.querySelector('.products-wrapper').children);
+
 productWrapper.addEventListener('click', (e) => {
   // fav and compare buttons 
   if(e.target.classList.contains('product-user-action-img')) {
     e.target.classList.toggle('product-user-action-img-active');
   }
 
+  // change color
+  if(e.target.classList.contains('product-color-img')) {
+    const product = e.target.parentElement.parentElement.parentElement.parentElement;
+    const productPic = product.querySelector('.product-img');
+    const productColors = Array.from(product.querySelectorAll('.product-colors')[0].children);
+    const productIndex = productWrapperArr.findIndex(selectedProduct => selectedProduct == product);
+    productColors.forEach((productColor, index) => {
+      if(e.target == productColor) {
+        productPic.src = `/assets/img/products/${productIndex}_${index}.webp`;
+      }
+    });
+  }
+
   // product quantity controls
   productInputFormValidation(e);
+
+
 
   // add to cart
   if(e.target.classList.contains('product-btn')) {
@@ -349,7 +375,7 @@ function cartModalEventsHandler(e) {
         // empty cart message
         cartModalTotal.nextElementSibling.classList.remove('is-hidden');
       }
-    }, 300);
+    }, 500);
 
   }
   // product quantity controls

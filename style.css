@@ -102,7 +102,6 @@ header nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .menu li, .user-menu li {
@@ -165,7 +164,6 @@ header nav {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  opacity: 0.7;
 }
 
 .menu select:focus {
@@ -355,16 +353,25 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(49, 49, 49, 0.2);
-  background-color: var(--white);
-  transition: background-color 0.2s ease-in;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.cart-modal-product::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(49, 49, 49, 0.2);
+  bottom: -2rem;
 }
 
 .cart-modal-product.cart-modal-product-remove {
-  background-color: var(--gray-medium-2);
+  opacity: 0;
 }
 
 .cart-modal-product-img {
@@ -667,7 +674,7 @@ header nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   gap: 1rem;
-  z-index: 3;
+  z-index: 6;
   width: 100%;
 }
 
@@ -850,6 +857,8 @@ header nav {
   color: var(--white);
   text-shadow: var(--black) 1px 0 3rem;
   margin: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 .slider-info-wrapper .bold {
@@ -862,6 +871,8 @@ header nav {
   color: var(--white);
   margin: 0 0 2rem 0;
   text-shadow: var(--black) 1px 0 3rem;
+  pointer-events: none;
+  user-select: none;
 }
 
 .slider-track-container {
@@ -1325,6 +1336,7 @@ path {
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 4rem;
 }
 
@@ -1332,6 +1344,7 @@ path {
   position: relative;
   width: 100%;
   cursor: pointer;
+  aspect-ratio: 12 / 10;
 }
 
 .stat-number {
@@ -1342,7 +1355,7 @@ path {
   margin: 0;
   padding: 0;
   text-align: left;
-  bottom: 15%;
+  bottom: 5%;
   left: 5%;
   line-height: 3rem;
   pointer-events: none;
@@ -1357,6 +1370,8 @@ path {
   border-radius: 2rem;
   width: 100%;
   pointer-events: none;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 1000px) {
@@ -1620,6 +1635,7 @@ path {
   bottom: 5rem;
   transform: translateX(5rem);
   transition: transform 0.2s ease-in;
+  z-index: 7;
 }
 
 .up-arrow.arrow-active {
