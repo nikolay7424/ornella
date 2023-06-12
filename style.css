@@ -781,11 +781,6 @@ header nav {
   margin-left: 1rem;
   transition: transform 0.3s ease-in-out;
 }
-/* why? */
-/* .accordion-item-header h4, 
-.accordion-item-header a {
-  pointer-events: none;
-} */
 
 .rotate {
   transform: rotateZ(180deg);

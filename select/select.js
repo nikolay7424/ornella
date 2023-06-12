@@ -45,6 +45,7 @@ function setupCustomElement(select) {
   select.customElement.tabIndex = 0;
 
   select.labelElement.classList.add('custom-select-value');
+  const arrowAfterElement = select.labelElement.querySelector('.custom-select-value::after');
   select.labelElement.innerText = select.selectedOption.label;
   select.customElement.append(select.labelElement);
 
@@ -59,6 +60,7 @@ function setupCustomElement(select) {
     optionElement.addEventListener('click', () => {
       select.selectValue(option.value);
       select.optionsCustomElement.classList.remove('show');
+      select.labelElement.classList.remove('rotate90');
     });
     select.optionsCustomElement.append(optionElement);
   });
@@ -66,11 +68,13 @@ function setupCustomElement(select) {
 
   select.labelElement.addEventListener('click', (e) => {
     select.optionsCustomElement.classList.toggle('show');
+    select.labelElement.classList.toggle('rotate90');
   });
 
   // hide when clicked outside
   select.customElement.addEventListener('blur', () => {
     select.optionsCustomElement.classList.remove('show');
+    select.labelElement.classList.remove('rotate90');
   });
 
   // keyboard control
@@ -81,6 +85,7 @@ function setupCustomElement(select) {
       case 'Space' :
         case 'Enter':
         select.optionsCustomElement.classList.toggle('show');
+        select.labelElement.classList.toggle('rotate90');
         e.preventDefault();
         break;
       case 'ArrowUp' :
@@ -99,6 +104,7 @@ function setupCustomElement(select) {
         break;
       case 'Escape': 
         select.optionsCustomElement.classList.remove('show');
+        select.labelElement.classList.remove('rotate90');
         e.preventDefault();
         break;
       default:

@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.custom-select-value.rotate90::after {
+  transform: rotateZ(90deg);
+}
+
 .custom-select-container:focus > .custom-select-value {
   border-width: 2px;
   outline: none;
