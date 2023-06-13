@@ -27,7 +27,7 @@
   content: url('../assets/svg/select_arrow.svg');
   display: inline-block;
   height: 2rem;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -77,4 +77,10 @@
 
 .custom-select-value:focus:after {
   transform: rotateZ(180deg);
+}
+
+@media (max-width: 1000px) { 
+  .custom-select-value {
+    padding: 0;
+  }
 }
