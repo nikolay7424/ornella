@@ -246,7 +246,6 @@ header nav {
 .phone-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 @media (max-width: 1000px) {
@@ -258,9 +257,9 @@ header nav {
 .city-select {
   display: flex;
   align-items: baseline;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.5rem;
-  min-width: 22rem;
+  min-width: 21rem;
 }
 
 .city-select p {
