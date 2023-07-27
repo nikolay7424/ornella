@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="select/select.css">
   <script type="module" src="app.js"></script>
+  <script defer src="slider.js"></script>
+  <script defer src="products.js"></script>
+  <script defer src="branches.js"></script>
 </head>
 
 <body>
@@ -243,7 +246,9 @@
       </div>
     </div>
     <div class="mobile-header">
-      <img src="assets/svg/logo-ru.svg" alt="ornellatex">
+      <a href="index.html">
+        <img src="assets/svg/logo-ru.svg" alt="ornellatex">
+      </a>
       <button class="burger">
         <div class="burger-item"></div>
       </button>
@@ -312,129 +317,131 @@
         <li><a href="compare.html">Сравнение</a></li>
       </ul>
     </div>
-    <div class="accordion">
-      <div class="accordion-item">
-        <div class="accordion-item-header-main">
-          <h3>Каталог тканей</h3>
-          <img src="assets/svg/arrow2.svg" alt="arrow">
-          <div class="cart">
-            <button class="btn cart-btn"><img src="assets/svg/cart.svg" alt="cart"></button>
+    <div class="mobile-catalog">
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-item-header-main">
+            <h3>Каталог тканей</h3>
+            <img src="assets/svg/arrow2.svg" alt="arrow">
+            <div class="cart">
+              <button class="btn cart-btn"><img src="assets/svg/cart.svg" alt="cart"></button>
+            </div>
           </div>
-        </div>
-        <div class="accordion-item-body-main">
-          <div class="accordion-item-body-content">
-            <div class="accordion-item">
-              <div class="accordion-item-header">
-                <h4><a href="catalog.html">Все ткани</a></h4>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-item-header">
-                <h4>По составу</h4>
-                <img src="assets/svg/arrow2.svg" alt="arrow">
-              </div>
-              <div class="accordion-item-body">
-                <div class="accordion-item-body-content">
-                  <ul>
-                    <li><a href="products.html">Акрил</a></li>
-                    <li><a href="products.html">Вискоза</a></li>
-                    <li><a href="products.html">Шерсть</a></li>
-                    <li><a href="products.html">Эластан</a></li>
-                    <li><a href="products.html">PU</a></li>
-                    <li><a href="products.html">Металлик</a></li>
-                    <li><a href="products.html">Полиэстр</a></li>
-                    <li><a href="products.html">Нейлон</a></li>
-                    <li><a href="products.html">Коттон</a></li>
-                    <li><a href="products.html">Лён</a></li>
-                    <li><a href="products.html">Спандекс</a></li>
-                    <li><a href="products.html">Люрекс</a></li>
-                  </ul>
+          <div class="accordion-item-body-main">
+            <div class="accordion-item-body-content">
+              <div class="accordion-item">
+                <div class="accordion-item-header">
+                  <h4><a href="catalog.html">Все ткани</a></h4>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-item-header">
-                <h4>По назначению</h4>
-                <img src="assets/svg/arrow2.svg" alt="arrow">
-              </div>
-              <div class="accordion-item-body">
-                <div class="accordion-item-body-content">
-                  <ul>
-                    <li><a href="products.html">Для купальников</a></li>
-                    <li><a href="products.html">Для свитеров</a></li>
-                    <li><a href="products.html">Для верхней одежды</a></li>
-                    <li><a href="products.html">Для рубашек</a></li>
-                    <li><a href="products.html">Для детской одежды</a></li>
-                    <li><a href="products.html">Для спортивной одежды</a></li>
-                    <li><a href="products.html">Для платьев</a></li>
-                    <li><a href="products.html">Для штанов</a></li>
-                    <li><a href="products.html">Для вечерних платьев</a></li>
-                    <li><a href="products.html">Для костюмов</a></li>
-                    <li><a href="products.html">Для подкладок</a></li>
-                    <li><a href="products.html">Для футболок</a></li>
-                  </ul>
+              <div class="accordion-item">
+                <div class="accordion-item-header">
+                  <h4>По составу</h4>
+                  <img src="assets/svg/arrow2.svg" alt="arrow">
+                </div>
+                <div class="accordion-item-body">
+                  <div class="accordion-item-body-content">
+                    <ul>
+                      <li><a href="products.html">Акрил</a></li>
+                      <li><a href="products.html">Вискоза</a></li>
+                      <li><a href="products.html">Шерсть</a></li>
+                      <li><a href="products.html">Эластан</a></li>
+                      <li><a href="products.html">PU</a></li>
+                      <li><a href="products.html">Металлик</a></li>
+                      <li><a href="products.html">Полиэстр</a></li>
+                      <li><a href="products.html">Нейлон</a></li>
+                      <li><a href="products.html">Коттон</a></li>
+                      <li><a href="products.html">Лён</a></li>
+                      <li><a href="products.html">Спандекс</a></li>
+                      <li><a href="products.html">Люрекс</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-item-header">
-                <h4>По типу</h4>
-                <img src="assets/svg/arrow2.svg" alt="arrow">
-              </div>
-              <div class="accordion-item-body">
-                <div class="accordion-item-body-content">
-                  <ul>
-                    <li><a href="products.html">Батист</a></li>
-                    <li><a href="products.html">Замша</a></li>
-                    <li><a href="products.html">Макраме</a></li>
-                    <li><a href="products.html">Штапель</a></li>
-                    <li><a href="products.html">Прошва</a></li>
-                    <li><a href="products.html">Неопрен</a></li>
-                    <li><a href="products.html">Джинс</a></li>
-                    <li><a href="products.html">Искуственная шерсть</a></li>
-                    <li><a href="products.html">Мохер</a></li>
-                    <li><a href="products.html">Органза</a></li>
-                    <li><a href="products.html">Резинка</a></li>
-                    <li><a href="products.html">Фатин</a></li>
-                    <li><a href="products.html">Бархат</a></li>
-                    <li><a href="products.html">Кашемир</a></li>
-                    <li><a href="products.html">Твид</a></li>
-                    <li><a href="products.html">Паетки</a></li>
-                    <li><a href="products.html">Рубашка</a></li>
-                    <li><a href="products.html">Камуфляж</a></li>
-                    <li><a href="products.html">Бенгалин</a></li>
-                    <li><a href="products.html">Кожзам</a></li>
-                    <li><a href="products.html">Твил</a></li>
-                    <li><a href="products.html">Пальто</a></li>
-                    <li><a href="products.html">Сатин/атлас/шелк</a></li>
-                    <li><a href="products.html">Бифлекс</a></li>
-                    <li><a href="products.html">Вельвет</a></li>
-                    <li><a href="products.html">Костюм</a></li>
-                    <li><a href="products.html">Трикотаж</a></li>
-                    <li><a href="products.html">Плащ</a></li>
-                    <li><a href="products.html">Сетка</a></li>
-                    <li><a href="products.html">Велюр</a></li>
-                    <li><a href="products.html">Коттон</a></li>
-                    <li><a href="products.html">Флис</a></li>
-                    <li><a href="products.html">Подкладка</a></li>
-                    <li><a href="products.html">Софт</a></li>
-                    <li><a href="products.html">Габардин</a></li>
-                    <li><a href="products.html">Гипюр</a></li>
-                    <li><a href="products.html">Хлопок</a></li>
-                    <li><a href="products.html">Поликоттон</a></li>
-                    <li><a href="products.html">Дайвинг</a></li>
-                    <li><a href="products.html">Жаккард</a></li>
-                    <li><a href="products.html">Лен</a></li>
-                    <li><a href="products.html">Шифон</a></li>
-                    <li><a href="products.html">Поплин</a></li>
-                    <li><a href="products.html">Букле</a></li>
-                  </ul>
+              <div class="accordion-item">
+                <div class="accordion-item-header">
+                  <h4>По назначению</h4>
+                  <img src="assets/svg/arrow2.svg" alt="arrow">
+                </div>
+                <div class="accordion-item-body">
+                  <div class="accordion-item-body-content">
+                    <ul>
+                      <li><a href="products.html">Для купальников</a></li>
+                      <li><a href="products.html">Для свитеров</a></li>
+                      <li><a href="products.html">Для верхней одежды</a></li>
+                      <li><a href="products.html">Для рубашек</a></li>
+                      <li><a href="products.html">Для детской одежды</a></li>
+                      <li><a href="products.html">Для спортивной одежды</a></li>
+                      <li><a href="products.html">Для платьев</a></li>
+                      <li><a href="products.html">Для штанов</a></li>
+                      <li><a href="products.html">Для вечерних платьев</a></li>
+                      <li><a href="products.html">Для костюмов</a></li>
+                      <li><a href="products.html">Для подкладок</a></li>
+                      <li><a href="products.html">Для футболок</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <div class="accordion-item-header">
-                <h4><a href="products.html">Распродажа</a></h4>
+              <div class="accordion-item">
+                <div class="accordion-item-header">
+                  <h4>По типу</h4>
+                  <img src="assets/svg/arrow2.svg" alt="arrow">
+                </div>
+                <div class="accordion-item-body">
+                  <div class="accordion-item-body-content">
+                    <ul>
+                      <li><a href="products.html">Батист</a></li>
+                      <li><a href="products.html">Замша</a></li>
+                      <li><a href="products.html">Макраме</a></li>
+                      <li><a href="products.html">Штапель</a></li>
+                      <li><a href="products.html">Прошва</a></li>
+                      <li><a href="products.html">Неопрен</a></li>
+                      <li><a href="products.html">Джинс</a></li>
+                      <li><a href="products.html">Искуственная шерсть</a></li>
+                      <li><a href="products.html">Мохер</a></li>
+                      <li><a href="products.html">Органза</a></li>
+                      <li><a href="products.html">Резинка</a></li>
+                      <li><a href="products.html">Фатин</a></li>
+                      <li><a href="products.html">Бархат</a></li>
+                      <li><a href="products.html">Кашемир</a></li>
+                      <li><a href="products.html">Твид</a></li>
+                      <li><a href="products.html">Паетки</a></li>
+                      <li><a href="products.html">Рубашка</a></li>
+                      <li><a href="products.html">Камуфляж</a></li>
+                      <li><a href="products.html">Бенгалин</a></li>
+                      <li><a href="products.html">Кожзам</a></li>
+                      <li><a href="products.html">Твил</a></li>
+                      <li><a href="products.html">Пальто</a></li>
+                      <li><a href="products.html">Сатин/атлас/шелк</a></li>
+                      <li><a href="products.html">Бифлекс</a></li>
+                      <li><a href="products.html">Вельвет</a></li>
+                      <li><a href="products.html">Костюм</a></li>
+                      <li><a href="products.html">Трикотаж</a></li>
+                      <li><a href="products.html">Плащ</a></li>
+                      <li><a href="products.html">Сетка</a></li>
+                      <li><a href="products.html">Велюр</a></li>
+                      <li><a href="products.html">Коттон</a></li>
+                      <li><a href="products.html">Флис</a></li>
+                      <li><a href="products.html">Подкладка</a></li>
+                      <li><a href="products.html">Софт</a></li>
+                      <li><a href="products.html">Габардин</a></li>
+                      <li><a href="products.html">Гипюр</a></li>
+                      <li><a href="products.html">Хлопок</a></li>
+                      <li><a href="products.html">Поликоттон</a></li>
+                      <li><a href="products.html">Дайвинг</a></li>
+                      <li><a href="products.html">Жаккард</a></li>
+                      <li><a href="products.html">Лен</a></li>
+                      <li><a href="products.html">Шифон</a></li>
+                      <li><a href="products.html">Поплин</a></li>
+                      <li><a href="products.html">Букле</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-item-header">
+                  <h4><a href="products.html">Распродажа</a></h4>
+                </div>
               </div>
             </div>
           </div>

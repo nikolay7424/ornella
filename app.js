@@ -127,218 +127,52 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 });
 
 
-// product user actions
-
-function isNumeric(str) {
-  if (typeof str != "string") return false;
-  return !isNaN(str) && 
-         !isNaN(parseFloat(str));
-}
-
-function productInputFormValidation(e) {
-    // minus button
-    if(e.target.classList.contains('btn-minus')) {
-      if(e.target.nextElementSibling.value <= 1) {
-        e.preventDefault();
-        return
-      };
-      e.target.nextElementSibling.value -= 1;
+// PRODUCTS
+export function productInputFormValidation(e) {
+  // minus button
+  if(e.target.classList.contains('btn-minus')) {
+    if(e.target.nextElementSibling.value <= 1) {
       e.preventDefault();
-  
-    }
-  
-    // plus button
-    if(e.target.classList.contains('btn-plus')) {
-      if(e.target.previousElementSibling.value >= 9999) {
-        e.preventDefault();
-        return;
-      }
-      let quantityValueInt = parseInt(e.target.previousElementSibling.value);
-      quantityValueInt += 1;
-      e.target.previousElementSibling.value = quantityValueInt;
-      e.preventDefault();
-    }
-  
-    // quantity text form validation
-    if(e.target.classList.contains('product-quantity')) {
-      e.target.addEventListener('beforeinput', e => {
-        // checking for text input
-        if(!isNumeric(e.data)) {
-          e.preventDefault();
-        }
-  
-        // cheking limits
-        if(parseInt(e.target.value) > 9999) {
-          e.preventDefault();
-          return;
-        }
-      });
-    }
-}
-
-const productWrapper = document.querySelector('.products-wrapper');
-const productWrapperArr = Array.from(document.querySelector('.products-wrapper').children);
-
-productWrapper.addEventListener('click', (e) => {
-  // fav and compare buttons 
-  if(e.target.classList.contains('product-user-action-img')) {
-    e.target.classList.toggle('product-user-action-img-active');
-  }
-
-  // change color
-  if(e.target.classList.contains('product-color-img')) {
-    const product = e.target.parentElement.parentElement.parentElement.parentElement;
-    const productPic = product.querySelector('.product-img');
-    const productColors = Array.from(product.querySelectorAll('.product-colors')[0].children);
-    const productIndex = productWrapperArr.findIndex(selectedProduct => selectedProduct == product);
-    productColors.forEach((productColor, index) => {
-      if(e.target == productColor) {
-        productPic.src = `/assets/img/products/${productIndex}_${index}.webp`;
-      }
-    });
-  }
-
-  // product quantity controls
-  productInputFormValidation(e);
-
-
-
-  // add to cart
-  if(e.target.classList.contains('product-btn')) {
-    if(parseInt(e.target.previousElementSibling.children[1].value) <= 0) {
-      e.preventDefault();
-    }
-    openCartModal();
-  }
-});
-
-
-// branches change url
-const branchesBlock = document.querySelector('.branches-picker');
-const branches = document.querySelectorAll('.branch');
-const branchIframe = document.querySelector('.branches-map');
-const branchesIframeUrls = [
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.180218746836!2d30.74680669317638!3d46.459159938969634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633d880e8eb89%3A0xae5125add1471600!2z0J7RgNC90LXQu9C70LAg0KLQtdC60YE!5e0!3m2!1sen!2sua!4v1681329162475!5m2!1sen!2sua',
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.24981102435!2d30.640811738497842!3d46.44374702262167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63283e08cf1c1%3A0x8ea58ca7ce998f16!2z0J7RgNC90LXQu9C70LAg0KLQtdC60YEgN9C60LwuINC80LDQs9Cw0LfQuNC9IDMyNw!5e0!3m2!1sen!2sua!4v1681383232471!5m2!1sen!2sua',
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1634.8478270058324!2d30.637148150813434!3d46.439277526430274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6334fc3d60457%3A0x3250fe8226e502b1!2sOrnella%20Tex!5e0!3m2!1sen!2sua!4v1681383259078!5m2!1sen!2sua',
-  'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6354.6342157656545!2d30.714127521378686!3d46.42689387618085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1681382550953!5m2!1sen!2sua',
-  'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8984.340192564181!2d30.750935140981497!3d46.441872326022306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1681382577536!5m2!1sen!2sua',
-  'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8987.619063076192!2d30.75773674554656!3d46.421985533014194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1681382603876!5m2!1sen!2sua'
-];
-
-branchesBlock.addEventListener('click', e => {
-  if(window.innerWidth < 700) {
+      return
+    };
+    e.target.nextElementSibling.value -= 1;
     e.preventDefault();
-    return;
+
   }
-  branches.forEach((branch, index) => {
-    if(branchesIframeUrls[index] === branchIframe.src && e.target === branch) {
+
+  // plus button
+  if(e.target.classList.contains('btn-plus')) {
+    if(e.target.previousElementSibling.value >= 9999) {
       e.preventDefault();
       return;
     }
-    if(e.target === branch) {
-      branchIframe.src = branchesIframeUrls[index];
-    }
-  });
-});
+    let quantityValueInt = parseInt(e.target.previousElementSibling.value);
+    quantityValueInt += 1;
+    e.target.previousElementSibling.value = quantityValueInt;
+    e.preventDefault();
+  }
 
+  // quantity text form validation
+  if(e.target.classList.contains('product-quantity')) {
+    e.target.addEventListener('beforeinput', e => {
+      // checking for text input
+      if(!isNumeric(e.data)) {
+        e.preventDefault();
+      }
 
-// SLIDER
-
-const track = document.querySelector('.slider-track');
-const slides = Array.from(track.children);
-const nextButtton = document.querySelector('.slider-button-right');
-const prevButtton = document.querySelector('.slider-button-left');
-const dotsNav = document.querySelector('.slider-nav');
-const dots = Array.from(dotsNav.children);
-let slideWidth = slides[0].getBoundingClientRect().width;
-
-// arrange slides next to each other
-const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + 'px';
-}
-slides.forEach(setSlidePosition);
-
-// resize fix
-window.addEventListener("resize", (event) => {
-  slideWidth = slides[0].getBoundingClientRect().width;
-  slides.forEach(setSlidePosition);
-});
-
-
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-  currentSlide.classList.remove('current-slide');
-  targetSlide.classList.add('current-slide');
-}
-
-const updateDots = (currentDot, targetDot) => {
-  currentDot.classList.remove('current-slide');
-  targetDot.classList.add('current-slide');
-}
-
-const hideShowArrows = (targetIndex) => {
-  if(targetIndex === 0) {
-    prevButtton.classList.add('is-hidden');
-    nextButtton.classList.remove('is-hidden');
-  } else if(targetIndex === slides.length - 1) {
-    prevButtton.classList.remove('is-hidden');
-    nextButtton.classList.add('is-hidden');
-  } else {
-    prevButtton.classList.remove('is-hidden');
-    nextButtton.classList.remove('is-hidden');
+      // cheking limits
+      if(parseInt(e.target.value) > 9999) {
+        e.preventDefault();
+        return;
+      }
+    });
   }
 }
 
-// move to right
-nextButtton.addEventListener('click', e => {
-  const currentSlide = track.querySelector('.current-slide');
-  const nextSlide = currentSlide.nextElementSibling;
-  const currentDot = dotsNav.querySelector('.current-slide');
-  const nextDot = currentDot.nextElementSibling;
-  const nextIndex = slides.findIndex(slide => slide == nextSlide);
-
-  moveToSlide(track, currentSlide, nextSlide);
-  updateDots(currentDot, nextDot);
-  hideShowArrows(nextIndex);
-});
-
-// move to left
-prevButtton.addEventListener('click', e => {
-  const currentSlide = track.querySelector('.current-slide');
-  const prevSlide = currentSlide.previousElementSibling;
-  const currentDot = dotsNav.querySelector('.current-slide');
-  const prevDot = currentDot.previousElementSibling;
-  const prevIndex = slides.findIndex(slide => slide == prevSlide);
-
-  moveToSlide(track, currentSlide, prevSlide);
-  updateDots(currentDot, prevDot);
-  hideShowArrows(prevIndex);
-});
-
-// move to selected indicator
-dotsNav.addEventListener('click', e => {
-  // what indicator was clicked
-  const targetDot = e.target.closest('button');
-
-  // if not dot - exit
-  if(!targetDot) return;
-
-  const currentSlide = track.querySelector('.current-slide');
-  const currentDot = dotsNav.querySelector('.current-slide');
-  const targetIndex = dots.findIndex(dot => dot == targetDot);
-  const targetSlide = slides[targetIndex];
-
-  moveToSlide(track, currentSlide, targetSlide);
-  updateDots(currentDot, targetDot);
-  hideShowArrows(targetIndex);
-
-});
 
 
 // CART MODAL
 const cartButtons = document.querySelectorAll('.cart-btn');
-const closeCartButtons = document.querySelectorAll('.cart-btn-close');
 const cartModal = document.querySelector('.cart-modal');
 const cartModalProducts = document.querySelector('.cart-modal-products');
 const cartModalTotal = document.querySelector('.cart-modal-total');
@@ -382,7 +216,7 @@ function cartModalEventsHandler(e) {
   productInputFormValidation(e);
 }
 
-function openCartModal() {
+export function openCartModal() {
   // empty cart message
   if(cartModalProducts.children.length === 0) {
     cartModalTotal.style.visibility = 'hidden';
@@ -393,6 +227,7 @@ function openCartModal() {
   cartModal.showModal();
   cartModal.addEventListener('click', cartModalEventsHandler);
 }
+
 
 
 // FOOTER UP ARROW
