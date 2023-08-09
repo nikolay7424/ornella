@@ -1,0 +1,5 @@
+root = true
+
+[*.{json, md}]
+indent_size = 2
+

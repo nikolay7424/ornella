@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="select/select.css">
   <script type="module" src="app.js"></script>
-  <script type="module" src="slider.js"></script>
-  <script type="module" src="branches.js"></script>
+  <script type="module" src="product.js"></script>
 </head>
 
 <body>
@@ -72,11 +71,13 @@
         <div class="messengers">
           <div class="messenger">
             <img src="assets/svg/viber.svg">
-            <a href="viber://chat?number=380961234567/"><span class="purple underline">написать в viber</span></a>
+            <a href="viber://chat?number=380961234567/"><span class="purple underline">написать в
+                viber</span></a>
           </div>
           <div class="messenger">
             <img src="assets/svg/telegram.svg">
-            <a href="https://t.me/{username}"><span class="lightblue underline">написать в telegram</span></a>
+            <a href="https://t.me/{username}"><span class="lightblue underline">написать в
+                telegram</span></a>
           </div>
           <div class="messenger">
             <img src="assets/svg/watsapp.svg">
@@ -107,7 +108,8 @@
             <div class="cart-modal-product-main-info">
               <a href="product.html"><img src="assets/img/products/1_1_min.webp" alt="wool"
                   class="cart-modal-product-img"></a>
-              <h3 class="product-name"><a href="product.html">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</a>
+              <h3 class="product-name"><a href="product.html">Плательно-костюмная ткань (шерсть 100%),
+                  ширина 150 см</a>
               </h3>
             </div>
             <p class="product-price">Цена: <br><span class="bold"> 113</span> грн./м2</p>
@@ -124,7 +126,8 @@
             <div class="cart-modal-product-main-info">
               <a href="product.html"><img src="assets/img/products/1_1_min.webp" alt="wool"
                   class="cart-modal-product-img"></a>
-              <h3 class="product-name"><a href="product.html">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</a>
+              <h3 class="product-name"><a href="product.html">Плательно-костюмная ткань (шерсть 100%),
+                  ширина 150 см</a>
               </h3>
             </div>
             <p class="product-price">Цена: <br><span class="bold"> 113</span> грн./м2</p>
@@ -270,7 +273,8 @@
       <div class="messengers">
         <div class="messenger">
           <img src="assets/svg/viber.svg">
-          <a href="viber://chat?number=380961234567/"><span class="purple underline">написать в viber</span></a>
+          <a href="viber://chat?number=380961234567/"><span class="purple underline">написать в
+              viber</span></a>
         </div>
         <div class="messenger">
           <img src="assets/svg/telegram.svg">
@@ -317,6 +321,7 @@
       </ul>
     </div>
     <div class="mobile-catalog">
+
       <div class="accordion">
         <div class="accordion-item">
           <div class="accordion-item-header-main">
@@ -448,53 +453,153 @@
       </div>
     </div>
   </header>
-  <section class="slider-wrapper">
-    <button class="slider-button slider-button-left is-hidden">
-      <img src="assets/svg/left-arrow.svg" alt="left">
-    </button>
-    <div class="slider-track-container">
-      <ul class="slider-track">
-        <li class="slider-slide current-slide">
-          <div class="slider-info-wrapper">
-            <h1><span class="bold">Скидки до 70%</span><br>на ткани для штор</h1>
-            <p>от 95 грн./м2</p>
-            <form action="products.html">
-              <button class="btn">Посмотреть и выбрать</button>
-            </form>
+
+  <div class="container">
+    <section class="product-section" data-product-id="0">
+      <div class="breadcrumbs">
+        <a href="index.html" class="breadcrumb">Главная</a>
+        <a href="catalog.html" class="breadcrumb">По типу</a>
+        <a href="products.html" class="breadcrumb">Шанель</a>
+        <div class="breadcrumb">Твид-шанель</div>
+      </div>
+      <div class="product-grid-wrapper">
+        <div class="product-img-set">
+          <div class="product-img-min-group">
+            <img src="assets/img/page-products/0/white/0.webp" class="product-img-min" alt="тканина">
+            <img src="assets/img/page-products/0/white/1.webp" class="product-img-min" alt="тканина">
+            <img src="assets/img/page-products/0/white/2.webp" class="product-img-min" alt="тканина">
+            <img src="assets/img/page-products/0/white/3.webp" class="product-img-min" alt="тканина">
           </div>
-          <img src="assets/img/Slider.webp" class="slider-media">
-        </li>
-        <li class="slider-slide">
-          <div class="slider-info-wrapper">
-            <h1><span class="bold">Скидки до 70%</span><br>на ткани для штор</h1>
-            <p>от 95 грн./м2</p>
-            <form action="products.html">
-              <button class="btn">Посмотреть и выбрать</button>
-            </form>
+          <img src="assets/img/page-products/0/white/0.webp" alt="тканина" class="product-img-max">
+          <div class="product-img-mobile-conrols">
+            <button class="product-mobile-slider-button product-mobile-slider-button-left">
+              <img src="assets/svg/left-arrow.svg" alt="left">
+            </button>
+            <button class="product-mobile-slider-button product-mobile-slider-button-right">
+              <img src="assets/svg/right-arrow.svg" alt="right">
+            </button>
           </div>
-          <img src="assets/img/Slider.webp" class="slider-media">
-        </li>
-        <li class="slider-slide">
-          <div class="slider-info-wrapper">
-            <h1><span class="bold">Скидки до 70%</span><br>на ткани для штор</h1>
-            <p>от 95 грн./м2</p>
-            <form action="products.html">
-              <button class="btn">Посмотреть и выбрать</button>
-            </form>
+        </div>
+        <div class="page-product">
+          <h1 class="product-title">Твид Шанель</h1>
+          <p class="product-code">Артикул: 203925</p>
+          <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
+          <div class="product-buttons">
+            <div class="product-buttons__quantity">
+              <button class="btn-minus">-</button>
+              <input type="text" class="product-quantity" value="1" min="0" max="9999">
+              <button class="btn-plus">+</button>
+            </div>
+            <button class="btn product-btn">В корзину</button>
           </div>
-          <img src="assets/img/Slider.webp" class="slider-media">
-        </li>
-      </ul>
-    </div>
-    <button class="slider-button slider-button-right">
-      <img src="assets/svg/right-arrow.svg" alt="right">
-    </button>
-    <div class="slider-nav">
-      <button class="slider-indicator current-slide"></button>
-      <button class="slider-indicator"></button>
-      <button class="slider-indicator"></button>
-    </div>
-  </section>
+          <p class="product-code">осталось 112 м2</p>
+          <div class="product-expand">
+            <div class="product-colors-wrapper">
+              <p class="product-colors-title">Цвета:</p>
+              <div class="page-product-colors">
+                <img src="assets/img/page-products/0/white/0.webp" data-color="white" alt="color"
+                  class="page-product-color-img page-product-color-active">
+                <img src="assets/img/page-products/0/purple/0.webp" data-color="purple" alt="color"
+                  class="page-product-color-img">
+              </div>
+            </div>
+            <div class="product-user-actions">
+
+              <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z">
+                </path>
+              </svg>
+              <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z">
+                </path>
+              </svg>
+
+            </div>
+          </div>
+          <div class="product-help">
+            <p>Нужна помощь с выбором?</p>
+            <p>Проконсультируйтесь с нашим специалистом</p>
+            <p><a href="tel:+380961234567">+38 (096) 123 45 67</a></p>
+          </div>
+        </div>
+        <div class="advantages">
+          <div class="advantage">
+            <h3>Возврат и обмен</h3>
+            <p class="product-code">В течение 14 дней</p>
+          </div>
+          <div class="advantage">
+            <h3>100% гарантия качества</h3>
+            <p class="product-code">весь товар только от проверенных производителей и брендов</p>
+          </div>
+          <div class="advantage">
+            <h3>Доставка по Украине</h3>
+            <p class="product-code">Доставка курьером Новой Почты</p>
+            <p class="product-code">Доставка на отделение Новой почты</p>
+            <p class="product-code">Доставка курьером по Одессе</p>
+          </div>
+        </div>
+        <table class="product-characteristics">
+          <thead>
+            <tr>
+              <th colspan="2">Характеристики</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span>Плотность</span><span>525 гр/м. пог.</span></td>
+            </tr>
+            <tr>
+              <td><span>Средняя накрутка</span><span>25м.</span></td>
+            </tr>
+            <tr>
+              <td><span>Состав</span><span>полиэстр 100%</span></td>
+            </tr>
+            <tr>
+              <td><span>Ширина</span><span>150см.</span></td>
+            </tr>
+            <tr>
+              <td><span>Цвет</span><span>бежевый</span></td>
+            </tr>
+            <tr>
+              <td><span>Производитель</span><span>Китай</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="product-info">
+          <h4 class="product-info-title">Информация</h4>
+          <div class="product-info-text">
+            <p>Данный материал выглядит очень привлекательно, а одежда получается недорогой и
+              очень стильной, так как на вид полотно имеет изысканные переплетения с узелками.</p>
+
+            <p>Чаще всего из твида Шанель шьют элегантные классические костюмы — жакеты и юбки, их сделала популярными
+              еще
+              великая Коко. Они до сих пор не утрачивают своей актуальности, меняются лишь силуэты и варианты отделки.
+            </p>
+
+            <p>Также из буклированного твида изготавливают шорты, жилеты, жакеты, брюки, сарафаны. Твид Шанель смотрится
+              потрясающе в любой расцветке и на любой фигуре.</p>
+
+            <p>Главное — подобрать нужную расцветку и правильную модель.</p>
+
+            <p>Белый твид возведен CHANEL в разряд базовых. Уже стали классикой костюмы и платья однотонные белые, либо
+              чёрно-белые, когда сочетаются два оттенка в одном изделии. Это действительно красиво!</p>
+
+            <p>Твидовые изделия универсальны по сезону. Белый жакет можно носить с маленьким чёрным платьем, юбку с
+              блузой
+              из шёлка крепдешина однотонного или с принтом, с водолазкой из тонкого кашемира.</p>
+
+            <p>В выходной день сочетайте жакет с джинсами и спортивной обувью. Твид сочетают в одном изделии с денимом в
+              виде куртки.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <section class="products">
     <div class="container">
       <div class="products-sale">
@@ -746,252 +851,8 @@
               </div>
             </div>
           </div>
-          <div class="product">
-            <a href="product.html"><img src="assets/img/products/6_0.webp" alt="wool" class="product-img"></a>
-            <div class="product-flag">РАСПРОДАЖА</div>
-            <p class="product-code">Артикул: 203925</p>
-            <h3 class="product-name">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</h3>
-            <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
-            <div class="product-buttons">
-              <div class="product-buttons__quantity">
-                <button class="btn-minus">-</button>
-                <input type="text" class="product-quantity" value="1" min="0" max="9999">
-                <button class="btn-plus">+</button>
-              </div>
-              <button class="btn product-btn">В корзину</button>
-            </div>
-            <div class="product-expand">
-              <div class="product-colors-wrapper">
-                <p class="product-colors-title">Цвета:</p>
-                <div class="product-colors">
-                  <img src="assets/img/products/6_0_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/6_1_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/6_2_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/6_3_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/6_4_min.webp" alt="color" class="product-color-img">
-                </div>
-              </div>
-              <div class="product-user-actions">
 
-                <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z" />
-                </svg>
-                <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z" />
-                </svg>
 
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <a href="product.html"><img src="assets/img/products/7_0.webp" alt="wool" class="product-img"></a>
-            <div class="product-flag">РАСПРОДАЖА</div>
-            <p class="product-code">Артикул: 203925</p>
-            <h3 class="product-name">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</h3>
-            <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
-            <div class="product-buttons">
-              <div class="product-buttons__quantity">
-                <button class="btn-minus">-</button>
-                <input type="text" class="product-quantity" value="1" min="0" max="9999">
-                <button class="btn-plus">+</button>
-              </div>
-              <button class="btn product-btn">В корзину</button>
-            </div>
-            <div class="product-expand">
-              <div class="product-colors-wrapper">
-                <p class="product-colors-title">Цвета:</p>
-                <div class="product-colors">
-                  <img src="assets/img/products/7_0_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/7_1_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/7_2_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/7_3_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/7_4_min.webp" alt="color" class="product-color-img">
-                </div>
-              </div>
-              <div class="product-user-actions">
-
-                <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z" />
-                </svg>
-                <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z" />
-                </svg>
-
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <a href="product.html"><img src="assets/img/products/8_0.webp" alt="wool" class="product-img"></a>
-            <div class="product-flag">РАСПРОДАЖА</div>
-            <p class="product-code">Артикул: 203925</p>
-            <h3 class="product-name">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</h3>
-            <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
-            <div class="product-buttons">
-              <div class="product-buttons__quantity">
-                <button class="btn-minus">-</button>
-                <input type="text" class="product-quantity" value="1" min="0" max="9999">
-                <button class="btn-plus">+</button>
-              </div>
-              <button class="btn product-btn">В корзину</button>
-            </div>
-            <div class="product-expand">
-              <div class="product-colors-wrapper">
-                <p class="product-colors-title">Цвета:</p>
-                <div class="product-colors">
-                  <img src="assets/img/products/8_0_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/8_1_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/8_2_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/8_3_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/8_4_min.webp" alt="color" class="product-color-img">
-                </div>
-              </div>
-              <div class="product-user-actions">
-
-                <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z" />
-                </svg>
-                <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z" />
-                </svg>
-
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <a href="product.html"><img src="assets/img/products/9_0.webp" alt="wool" class="product-img"></a>
-            <div class="product-flag">РАСПРОДАЖА</div>
-            <p class="product-code">Артикул: 203925</p>
-            <h3 class="product-name">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</h3>
-            <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
-            <div class="product-buttons">
-              <div class="product-buttons__quantity">
-                <button class="btn-minus">-</button>
-                <input type="text" class="product-quantity" value="1" min="0" max="9999">
-                <button class="btn-plus">+</button>
-              </div>
-              <button class="btn product-btn">В корзину</button>
-            </div>
-            <div class="product-expand">
-              <div class="product-colors-wrapper">
-                <p class="product-colors-title">Цвета:</p>
-                <div class="product-colors">
-                  <img src="assets/img/products/9_0_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/9_1_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/9_2_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/9_3_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/9_4_min.webp" alt="color" class="product-color-img">
-                </div>
-              </div>
-              <div class="product-user-actions">
-
-                <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z" />
-                </svg>
-                <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z" />
-                </svg>
-
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <a href="product.html"><img src="assets/img/products/10_0.webp" alt="wool" class="product-img"></a>
-            <div class="product-flag">РАСПРОДАЖА</div>
-            <p class="product-code">Артикул: 203925</p>
-            <h3 class="product-name">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</h3>
-            <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
-            <div class="product-buttons">
-              <div class="product-buttons__quantity">
-                <button class="btn-minus">-</button>
-                <input type="text" class="product-quantity" value="1" min="0" max="9999">
-                <button class="btn-plus">+</button>
-              </div>
-              <button class="btn product-btn">В корзину</button>
-            </div>
-            <div class="product-expand">
-              <div class="product-colors-wrapper">
-                <p class="product-colors-title">Цвета:</p>
-                <div class="product-colors">
-                  <img src="assets/img/products/10_0_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/10_1_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/10_2_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/10_3_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/10_4_min.webp" alt="color" class="product-color-img">
-                </div>
-              </div>
-              <div class="product-user-actions">
-
-                <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z" />
-                </svg>
-                <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z" />
-                </svg>
-
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <a href="product.html"><img src="assets/img/products/11_0.webp" alt="wool" class="product-img"></a>
-            <div class="product-flag">РАСПРОДАЖА</div>
-            <p class="product-code">Артикул: 203925</p>
-            <h3 class="product-name">Плательно-костюмная ткань (шерсть 100%), ширина 150 см</h3>
-            <p class="product-price">Цена: <span class="bold"> 113</span> грн./м2</p>
-            <div class="product-buttons">
-              <div class="product-buttons__quantity">
-                <button class="btn-minus">-</button>
-                <input type="text" class="product-quantity" value="1" min="0" max="9999">
-                <button class="btn-plus">+</button>
-              </div>
-              <button class="btn product-btn">В корзину</button>
-            </div>
-            <div class="product-expand">
-              <div class="product-colors-wrapper">
-                <p class="product-colors-title">Цвета:</p>
-                <div class="product-colors">
-                  <img src="assets/img/products/11_0_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/11_1_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/11_2_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/11_3_min.webp" alt="color" class="product-color-img">
-                  <img src="assets/img/products/11_4_min.webp" alt="color" class="product-color-img">
-                </div>
-              </div>
-              <div class="product-user-actions">
-
-                <svg class="product-user-action-img" width="40" height="34" viewBox="0 0 20 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.82031 16.6163L8.72266 16.5265L1.87891 10.171C0.679688 9.05775 0 7.49525 0 5.85853V5.72962C0 2.97962 1.95312 0.620247 4.65625 0.104622C6.19531 -0.192253 7.76953 0.163216 9.02344 1.04603C9.375 1.29603 9.70312 1.58509 10 1.91712C10.1641 1.72962 10.3398 1.55775 10.5273 1.39759C10.6719 1.27259 10.8203 1.1554 10.9766 1.04603C12.2305 0.163216 13.8047 -0.192253 15.3438 0.100716C18.0469 0.616341 20 2.97962 20 5.72962V5.85853C20 7.49525 19.3203 9.05775 18.1211 10.171L11.2773 16.5265L11.1797 16.6163C10.8594 16.9132 10.4375 17.0812 10 17.0812C9.5625 17.0812 9.14062 16.9171 8.82031 16.6163ZM9.33984 3.99134C9.32422 3.97962 9.3125 3.964 9.30078 3.94837L8.60547 3.16712L8.60156 3.16322C7.69922 2.1515 6.33594 1.69056 5.00781 1.94447C3.1875 2.29212 1.875 3.87806 1.875 5.72962V5.85853C1.875 6.97181 2.33984 8.03822 3.15625 8.79603L10 15.1515L16.8438 8.79603C17.6602 8.03822 18.125 6.97181 18.125 5.85853V5.72962C18.125 3.88197 16.8125 2.29212 14.9961 1.94447C13.668 1.69056 12.3008 2.1554 11.4023 3.16322C11.4023 3.16322 11.4023 3.16322 11.3984 3.16712C11.3945 3.17103 11.3984 3.16712 11.3945 3.17103L10.6992 3.95228C10.6875 3.9679 10.6719 3.97962 10.6602 3.99525C10.4844 4.17103 10.2461 4.26869 10 4.26869C9.75391 4.26869 9.51562 4.17103 9.33984 3.99525V3.99134Z" />
-                </svg>
-                <svg class="product-user-action-img" width="44" height="34" viewBox="0 0 23 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M13.824 1.125H18.4325C19.0698 1.125 19.5847 1.62773 19.5847 2.25C19.5847 2.87227 19.0698 3.375 18.4325 3.375H14.3425C14.1553 4.28203 13.518 5.03086 12.6719 5.38945V15.75H18.4325C19.0698 15.75 19.5847 16.2527 19.5847 16.875C19.5847 17.4973 19.0698 18 18.4325 18H11.5198H4.60706C3.96979 18 3.45494 17.4973 3.45494 16.875C3.45494 16.2527 3.96979 15.75 4.60706 15.75H10.3677V5.38945C9.52159 5.02734 8.88432 4.27852 8.6971 3.375H4.60706C3.96979 3.375 3.45494 2.87227 3.45494 2.25C3.45494 1.62773 3.96979 1.125 4.60706 1.125H9.21555C9.74121 0.442969 10.5765 0 11.5198 0C12.4631 0 13.2984 0.442969 13.824 1.125ZM15.8259 11.25H21.0392L18.4325 6.88359L15.8259 11.25ZM18.4325 14.625C16.1679 14.625 14.2849 13.4297 13.8961 11.8512C13.8024 11.4645 13.9321 11.0672 14.1373 10.7227L17.5649 4.98516C17.7449 4.68281 18.0761 4.5 18.4325 4.5C18.789 4.5 19.1202 4.68633 19.3002 4.98516L22.7278 10.7227C22.933 11.0672 23.0626 11.4645 22.969 11.8512C22.5802 13.4297 20.6972 14.625 18.4325 14.625ZM4.56385 6.88359L1.95717 11.25H7.17413L4.56385 6.88359ZM0.0309677 11.8512C-0.0626424 11.4645 0.0669715 11.0672 0.272194 10.7227L3.69976 4.98516C3.87978 4.68281 4.21102 4.5 4.56746 4.5C4.92389 4.5 5.25513 4.68633 5.43515 4.98516L8.86272 10.7227C9.06794 11.0672 9.19755 11.4645 9.10394 11.8512C8.7115 13.4297 6.8285 14.625 4.56385 14.625C2.29921 14.625 0.419809 13.4297 0.0309677 11.8512Z" />
-                </svg>
-
-              </div>
-            </div>
-          </div>
         </div>
         <div class="open-more-wrapper">
           <a href="products.html" class="open-more">Смотреть все предложения</a>
@@ -999,259 +860,6 @@
       </div>
     </div>
   </section>
-  <div class="container">
-    <section class="catalog-grid">
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/hlopok.webp) center center / cover">
-        <h3 class="catalog-grid-name">Хлопок</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/shelk.webp) center center / cover">
-        <h3 class="catalog-grid-name">Шелк</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/kruzhevo.webp) center center / cover">
-        <h3 class="catalog-grid-name">Кружево</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/flis.webp) center center / cover">
-        <h3 class="catalog-grid-name">Флис</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/len.webp) center center / cover">
-        <h3 class="catalog-grid-name">Лён</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/zhakkard.webp) center center / cover">
-        <h3 class="catalog-grid-name">Жаккард</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/trickotazh.webp) center center / cover">
-        <h3 class="catalog-grid-name">Трикотаж</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/viskoza.webp) center center / cover">
-        <h3 class="catalog-grid-name">Вискоза</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/palto.webp) center center / cover">
-        <h3 class="catalog-grid-name">Для пальто</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/jins.webp) center center / cover">
-        <h3 class="catalog-grid-name">Джинс</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/sherst.webp) center center / cover">
-        <h3 class="catalog-grid-name">Шерсть</h3>
-      </a>
-      <a href="products.html" class="catalog-grid-item"
-        style="background: url(assets/img/catalogs/kostum.webp) center center / cover">
-        <h3 class="catalog-grid-name">Костюмные</h3>
-      </a>
-    </section>
-  </div>
-
-  <section class="statistic">
-    <img src="assets/img/stats_bg.webp" class="stats-bg">
-    <div class="stats-container">
-      <div class="stats-text">
-        <h3 class="stats-title">
-          Мы занимаемся розничной и оптовой продажей тканей для одежды
-          <span class="orange">
-            более 15 лет
-          </span>
-        </h3>
-        <h4 class="stats-ul-title">Плюсы сотрудничества с нами — это:</h4>
-        <ul class="stats-ul">
-          <li>возможность приобретения тканей оптом, мелким оптом и в розницу</li>
-          <li>интернет-магазин с удобным поиском и обилием полезной дополнительной информации</li>
-          <li>цены на ткани дешевле, чем у конкурентов благодаря прямым поставкам с фабрик</li>
-          <li>внушительный, постоянно пополняемый ассортимент</li>
-          <li>мы отслеживаем модные тенденции и привозим на реализацию самые роскошные брендовые ткани</li>
-          <li>наличие в продаже тканей из Италии</li>
-          <li>действующая система доставки</li>
-          <li>у нас самая большая коллекция однотонного крепдешина</li>
-          <li>безупречное качество предлагаемого товара</li>
-          <li>поддержка персональными консультантами</li>
-        </ul>
-      </div>
-      <div class="stats">
-        <div class="stat">
-          <img src="assets/img/stats/stat-1.webp" class="stat-img">
-          <h5 class="stat-number">+750 <br><span class="stat-desc">типов тканей</span></h5>
-        </div>
-        <div class="stat">
-          <img src="assets/img/stats/stat-2.webp" class="stat-img">
-          <h5 class="stat-number">+455 <br><span class="stat-desc">производителей</span></h5>
-        </div>
-        <div class="stat">
-          <img src="assets/img/stats/stat-3.webp" class="stat-img">
-          <h5 class="stat-number">+2750 <br><span class="stat-desc">цветов и оттенков</span></h5>
-        </div>
-        <div class="stat">
-          <img src="assets/img/stats/stat-4.webp" class="stat-img">
-          <h5 class="stat-number">+57 <br><span class="stat-desc">консультантов</span></h5>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="news">
-    <div class="container">
-      <div class="news-wrapper">
-        <div class="news-article">
-          <a href="article.html" class="news-open orange underline">
-            <img src="assets/img/news/1.webp" alt="article" class="news-img">
-          </a>
-          <h3 class="news-title">Важные сведения о доставке</h3>
-          <p class="news-preview">Для предотвращения возможных проблем из-за недостачи пар или явного повреждения,
-            проверяйте товар непосредственно при получении на отделении служб доставки. </p>
-          <a href="article.html" class="news-open orange underline">Подробнее</a>
-        </div>
-        <div class="news-article">
-          <a href="article.html" class="news-open orange underline">
-            <img src="assets/img/news/2.webp" alt="article" class="news-img">
-          </a>
-          <h3 class="news-title">Важные сведения о доставке</h3>
-          <p class="news-preview">Для предотвращения возможных проблем из-за недостачи пар или явного повреждения,
-            проверяйте товар непосредственно при получении на отделении служб доставки. </p>
-          <a href="article.html" class="news-open orange underline">Подробнее</a>
-        </div>
-        <div class="news-article">
-          <a href="article.html" class="news-open orange underline">
-            <img src="assets/img/news/3.webp" alt="article" class="news-img">
-          </a>
-          <h3 class="news-title">Важные сведения о доставке</h3>
-          <p class="news-preview">Для предотвращения возможных проблем из-за недостачи пар или явного повреждения,
-            проверяйте товар непосредственно при получении на отделении служб доставки. </p>
-          <a href="article.html" class="news-open orange underline">Подробнее</a>
-        </div>
-        <div class="news-article">
-          <a href="article.html" class="news-open orange underline">
-            <img src="assets/img/news/4.webp" alt="article" class="news-img">
-          </a>
-          <h3 class="news-title">Важные сведения о доставке</h3>
-          <p class="news-preview">Для предотвращения возможных проблем из-за недостачи пар или явного повреждения,
-            проверяйте товар непосредственно при получении на отделении служб доставки. </p>
-          <a href="article.html" class="news-open orange underline">Подробнее</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about">
-    <div class="container">
-      <h2 class="about-title">О компании Ornellatex</h2>
-      <div class="about-text">
-        <p>Длительное время в Одессе отсутствовал магазин, который сосредотачивал бы в себе многообразие тканей и
-          фурнитуры. Покупателям было сложно подобрать себе все составляющие готового изделия в комплексе.Процесс
-          вызывал
-          неудобства и временные затраты.
-        </p>
-        <p>
-          По этой причине, за эти годы, была существенно утрачена культура пошива изделий «под себя» и «для себя».
-          Оказалось, что гораздо легче покупать готовые изделия. При этом они не всегда отвечали индивидуальным
-          требованиям клиентов. А ведь у Вас или Ваших близких постоянно возникает желание или повод выглядеть
-          эффектно,индивидуально, красиво и удобно одновременно.
-        </p>
-        <p>
-          Основная задача, которая стояла перед нами – создание единого магазина, где покупатель сможет подобрать
-          различные виды тканей и фурнитуры для себя, изменить что-либо в интерьере своего дома, воспользоваться
-          услугами
-          ателье. И, самое главное, чтобы это все происходило в комфортных условиях при высоком уровне обслуживания.
-        </p>
-        <p>
-          Часть планов уже реализована. На данный момент мы предлагаем более 20000 позиций тканей и фурнитуры. При этом
-          мы
-          будем постоянно расширять спектр услуг и ассортимента. Мы постоянно работаем над этим и будем Вас
-          информировать.
-          Магазин открыт для Вас ежедневно!
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="branches">
-    <div class="container">
-      <div class="branches-wrapper">
-        <div class="branches-picker">
-          <div class="branch">
-            <h3 class="branch-title">
-              Магазин тканей в Одессе:
-            </h3>
-            <p class="branch-text">
-              Ул. Екатерининская, 96
-            </p>
-            <a href="tel:+380961234567" class="branch-phone">+38 <span class="orange">(096)</span> 123 45 67</a>
-            <a href="https://www.google.com/maps" class="branch-mobile-map-link"><img class="branch-map-img"
-                src="assets/svg/map.svg" alt="map">Посмотреть на карте</a>
-          </div>
-          <div class="branch">
-            <h3 class="branch-title">
-              Магазин тканей в Одессе:
-            </h3>
-            <p class="branch-text">
-              Ул. Екатерининская, 96
-            </p>
-            <a href="tel:+380961234567" class="branch-phone">+38 <span class="orange">(096)</span> 123 45 67</a>
-            <a href="https://www.google.com/maps" class="branch-mobile-map-link"><img class="branch-map-img"
-                src="assets/svg/map.svg" alt="map">Посмотреть на карте</a>
-          </div>
-          <div class="branch">
-            <h3 class="branch-title">
-              Магазин тканей в Одессе:
-            </h3>
-            <p class="branch-text">
-              Ул. Екатерининская, 96
-            </p>
-            <a href="tel:+380961234567" class="branch-phone">+38 <span class="orange">(096)</span> 123 45 67</a>
-            <a href="https://www.google.com/maps" class="branch-mobile-map-link"><img class="branch-map-img"
-                src="assets/svg/map.svg" alt="map">Посмотреть на карте</a>
-          </div>
-          <div class="branch">
-            <h3 class="branch-title">
-              Магазин тканей в Одессе:
-            </h3>
-            <p class="branch-text">
-              Ул. Екатерининская, 96
-            </p>
-            <a href="tel:+380961234567" class="branch-phone">+38 <span class="orange">(096)</span> 123 45 67</a>
-            <a href="https://www.google.com/maps" class="branch-mobile-map-link"><img class="branch-map-img"
-                src="assets/svg/map.svg" alt="map">Посмотреть на карте</a>
-          </div>
-          <div class="branch">
-            <h3 class="branch-title">
-              Магазин тканей в Одессе:
-            </h3>
-            <p class="branch-text">
-              Ул. Екатерининская, 96
-            </p>
-            <a href="tel:+380961234567" class="branch-phone">+38 <span class="orange">(096)</span> 123 45 67</a>
-            <a href="https://www.google.com/maps" class="branch-mobile-map-link"><img class="branch-map-img"
-                src="assets/svg/map.svg" alt="map">Посмотреть на карте</a>
-          </div>
-          <div class="branch">
-            <h3 class="branch-title">
-              Магазин тканей в Одессе:
-            </h3>
-            <p class="branch-text">
-              Ул. Екатерининская, 96
-            </p>
-            <a href="tel:+380961234567" class="branch-phone">+38 <span class="orange">(096)</span> 123 45 67</a>
-            <a href="https://www.google.com/maps" class="branch-mobile-map-link"><img class="branch-map-img"
-                src="assets/svg/map.svg" alt="map">Посмотреть на карте</a>
-          </div>
-        </div>
-        <div class="branches-maps">
-          <iframe class="branches-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.180218746836!2d30.74680669317638!3d46.459159938969634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633d880e8eb89%3A0xae5125add1471600!2z0J7RgNC90LXQu9C70LAg0KLQtdC60YE!5e0!3m2!1sen!2sua!4v1681329162475!5m2!1sen!2sua"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <a href="#header" class="up-arrow"><img src="assets/svg/up-arrow.svg" alt="up"></a>
 
